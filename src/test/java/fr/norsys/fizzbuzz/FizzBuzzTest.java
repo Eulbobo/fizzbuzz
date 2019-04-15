@@ -21,8 +21,7 @@ public class FizzBuzzTest {
             printer.print("fizz");
         };
         final Modulo modulo = new MyModulo(3, operation);
-        final Teller fizzbuzz = new FizzBuzzTeller(() -> {
-        }, modulo);
+        final Teller fizzbuzz = new FizzBuzzTeller(this::noflush, modulo);
 
         fizzbuzz.sayNumber(0);
 
@@ -36,8 +35,7 @@ public class FizzBuzzTest {
             printer.print("fizz");
         };
         final Modulo modulo = new MyModulo(3, operation);
-        final Teller fizzbuzz = new FizzBuzzTeller(() -> {
-        }, modulo);
+        final Teller fizzbuzz = new FizzBuzzTeller(this::noflush, modulo);
 
         fizzbuzz.sayNumber(3);
 
@@ -51,8 +49,7 @@ public class FizzBuzzTest {
             printer.print("buzz");
         };
         final Modulo modulo = new MyModulo(5, operation);
-        final Teller fizzbuzz = new FizzBuzzTeller(() -> {
-        }, modulo);
+        final Teller fizzbuzz = new FizzBuzzTeller(this::noflush, modulo);
 
         fizzbuzz.sayNumber(5);
 
@@ -66,8 +63,7 @@ public class FizzBuzzTest {
             printer.print("fizz");
         };
         final Modulo modulo = new MyModulo(3, operation);
-        final Teller fizzbuzz = new FizzBuzzTeller(() -> {
-        }, modulo);
+        final Teller fizzbuzz = new FizzBuzzTeller(this::noflush, modulo);
 
         fizzbuzz.sayNumber(6);
 
@@ -81,8 +77,7 @@ public class FizzBuzzTest {
             printer.print("buzz");
         };
         final Modulo modulo = new MyModulo(5, operation);
-        final Teller fizzbuzz = new FizzBuzzTeller(() -> {
-        }, modulo);
+        final Teller fizzbuzz = new FizzBuzzTeller(this::noflush, modulo);
 
         fizzbuzz.sayNumber(10);
 
@@ -96,8 +91,7 @@ public class FizzBuzzTest {
             printer.print("fizzbuzz");
         };
         final Modulo modulo = new MyModulo(15, operation);
-        final Teller fizzbuzz = new FizzBuzzTeller(() -> {
-        }, modulo);
+        final Teller fizzbuzz = new FizzBuzzTeller(this::noflush, modulo);
 
         fizzbuzz.sayNumber(15);
 
@@ -114,11 +108,14 @@ public class FizzBuzzTest {
         final Modulo moduloFizz = new MyModulo(3, sayFizz);
         final Modulo moduloBuzz = new MyModulo(5, sayBuzz);
         final Modulo moduloFizzBuzz = new MyModulo(15, sayFizzbuzz);
-        final Teller fizzbuzz = new FizzBuzzTeller(() -> {
-        }, moduloFizzBuzz, moduloFizz, moduloBuzz);
+        final Teller fizzbuzz = new FizzBuzzTeller(this::noflush, moduloFizzBuzz, moduloFizz, moduloBuzz);
 
         fizzbuzz.sayNumber(15);
 
         verify(printer).print("fizzbuzz");
+    }
+
+    private void noflush() {
+        // noflush
     }
 }

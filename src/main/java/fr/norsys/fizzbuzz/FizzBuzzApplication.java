@@ -26,12 +26,15 @@ public class FizzBuzzApplication {
 
         fizzbuzz.sayNumber(0); // rien
         fizzbuzz.sayNumber(3); // fizz
+        fizzbuzz.sayNumber(4); // rien
         fizzbuzz.sayNumber(5); // buzz
         fizzbuzz.sayNumber(9); // fizz
 
         fizzbuzz.sayNumber(15); // fizzbuzz
 
-        for (int i = 0; i < 20; i++) {
+        sysout.print("essai avec une boucle jusqu'à 30");
+
+        for (int i = 0; i <= 30; i++) {
             sysout.print(" >> " + i);
             fizzbuzz.sayNumber(i);
         }
