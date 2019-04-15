@@ -1,26 +1,10 @@
 package fr.norsys.simple;
 
-import java.io.PrintStream;
+class SimpleFizzBuzz {
 
-public class SimpleFizzBuzz {
+    private final Printer printer;
 
-    public static class Printer {
-        PrintStream writer;
-
-        Printer(final PrintStream writer) {
-            this.writer = writer;
-        }
-
-        public void print(final String value) {
-            if (value.length() > 0) {
-                writer.println(value);
-            }
-        }
-    }
-
-    Printer printer;
-
-    public SimpleFizzBuzz(final Printer printer) {
+    SimpleFizzBuzz(final Printer printer) {
         this.printer = printer;
     }
 
@@ -36,16 +20,6 @@ public class SimpleFizzBuzz {
 
             printer.print(sb.toString());
         }
-    }
-
-    public static void main(final String[] args) {
-        final Printer printToLog = new Printer(System.out);
-        final SimpleFizzBuzz fizzBuzz = new SimpleFizzBuzz(printToLog);
-        fizzBuzz.sayNumber(0);
-        fizzBuzz.sayNumber(1);
-        fizzBuzz.sayNumber(15); // fizzbuzz
-        fizzBuzz.sayNumber(3); // fizz
-        fizzBuzz.sayNumber(5); // buzz
     }
 
 }

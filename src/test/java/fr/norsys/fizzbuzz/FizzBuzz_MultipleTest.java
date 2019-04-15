@@ -13,7 +13,7 @@ import fr.norsys.fizzbuzz.modulo.MyModulo;
 import fr.norsys.fizzbuzz.printer.SinglePrint;
 import fr.norsys.fizzbuzz.teller.FizzBuzzTeller;
 
-public class AllFizzBuzzTest {
+public class FizzBuzz_MultipleTest {
 
     @Test
     public void should_say_fizzbuzz_with_multiple_of_15_only_and_all_elements() {

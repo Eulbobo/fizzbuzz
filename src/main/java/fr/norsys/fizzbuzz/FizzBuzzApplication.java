@@ -29,7 +29,6 @@ public class FizzBuzzApplication {
         fizzbuzz.sayNumber(4); // rien
         fizzbuzz.sayNumber(5); // buzz
         fizzbuzz.sayNumber(9); // fizz
-
         fizzbuzz.sayNumber(15); // fizzbuzz
 
         sysout.print("essai avec une boucle jusqu'à 30");

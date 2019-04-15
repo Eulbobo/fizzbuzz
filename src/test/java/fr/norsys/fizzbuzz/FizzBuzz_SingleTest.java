@@ -12,7 +12,7 @@ import fr.norsys.fizzbuzz.modulo.FizzOperation;
 import fr.norsys.fizzbuzz.modulo.MyModulo;
 import fr.norsys.fizzbuzz.teller.FizzBuzzTeller;
 
-public class FizzBuzzTest {
+public class FizzBuzz_SingleTest {
 
     @Test
     public void should_say_nothing_with_0() {
