@@ -10,7 +10,12 @@ public class MyFizzBuzz implements FizzBuzz {
 
     @Override
     public void sayNumber(final int number) {
-        // TODO Auto-generated method stub
+        if (number == 3) {
+            printer.print("fizz");
+        }
+        if (number == 5) {
+            printer.print("buzz");
+        }
 
     }
 

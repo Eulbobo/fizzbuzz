@@ -24,4 +24,14 @@ public class FizzBuzzTest {
 
         Mockito.verify(printer).print("fizz");
     }
+
+    @Test
+    public void should_say_buzz_with_5() {
+        final Printer printer = Mockito.mock(Printer.class);
+        final FizzBuzz fizzbuzz = new MyFizzBuzz(printer);
+
+        fizzbuzz.sayNumber(5);
+
+        Mockito.verify(printer).print("buzz");
+    }
 }
