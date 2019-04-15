@@ -1,4 +1,4 @@
-package fr.norsys.fizzbuzz;
+package fr.norsys.simple;
 
 import java.io.PrintStream;
 

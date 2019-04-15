@@ -1,6 +1,6 @@
 package fr.norsys.fizzbuzz;
 
-public interface FizzBuzz {
+public interface Teller {
 
     void sayNumber(int number);
 
